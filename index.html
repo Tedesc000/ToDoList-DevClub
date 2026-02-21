@@ -11,20 +11,29 @@
     <title>To Do List</title>
 </head>
 <body>
+    <div id="circulos">
+        <div class="circulo" id="circulo1"></div>
+        <div class="circulo" id="circulo2"></div>
+        <div class="circulo" id="circulo3"></div>
+    </div>
+
     <header>
         <h1>Minha Lista de Tarefas</h1>
     </header>
     <div id="corpoToDo">
-        <input type="text" placeholder="Digite a sua tarefa" id="inputTarefa">
-        <button id="adicionar">Adicionar</button>
-        <ul>
-            <li class="itemLista">
+        <div id="entradaTarefa">
+            <input type="text" placeholder="Digite a sua tarefa" id="inputTarefa">
+            <button id="adicionar" onclick="adicionarTarefa()">Adicionar</button>
+        </div>
+        <ul id="lista">
+            <!-- <li class="itemLista" id="tarefa0">
                 Terminar o site
-                <button class="concluir">
+                <button class="concluir" onclick="fecharTarefa(0)">
                 <i class="bi bi-x-circle fechar"></i>
                 </button>
-            </li>
+            </li> -->
         </ul>
     </div>
 </body>
+<script src="scripts.js"></script>
 </html>

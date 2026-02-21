@@ -6,6 +6,7 @@
 
 body{
     background-color: wheat;
+    background-image: linear-gradient(to right, wheat, #e7e6e4, wheat);
     width: 100vw;
     min-height: 100vh;
     font-family: "Rubik", sans-serif;
@@ -40,9 +41,11 @@ button{
     justify-content: center;
     border-radius: 10px;
     gap: 20px;
-    height: 20vh;
+    min-height: 20vh;
+    padding: 20px;
     width: 60vw;
     background-color: rgb(19, 102, 19);
+    z-index: 2;
 }
 
 header{
@@ -51,6 +54,7 @@ header{
     width: 100vw;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 #adicionar{
@@ -79,13 +83,14 @@ header{
     font-size: 1.3rem;
     border-radius: 10px;
     border: none;
-    width: 300px;
+    width: 500px;
     height: 50px;
     border: 3px solid black;
 }
 
-ul{
+#lista{
     list-style: none;
+    z-index: 2;
 }
 
 .itemLista{
@@ -103,11 +108,17 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 5px;
 }
 
 .itemLista:hover{
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.conteudoTarefa{
+    display: flex;
+    align-items: center;
 }
 
 .fechar{
@@ -117,9 +128,63 @@ ul{
 }
 
 .concluir{
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .concluir:hover{
     transform: scale(1.2);
+}
+
+.concluir:active{
+    transform: scale(0.9);
+}
+
+#entradaTarefa{
+    display: flex;
+    gap: 20px;
+}
+
+.numeroTarefa{
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    font-size: 1.3rem;
+}
+
+#circulos{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+    pointer-events: none;
+    position: fixed;
+}
+
+.circulo{
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(19, 102, 19, 0.25)
+}
+
+#circulo1{
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: 5%;
+}
+
+#circulo2 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 10%;
+}
+
+#circulo3 {
+    width: 250px;
+    height: 250px;
+    top: 70%;
+    right: 40%;
 }
