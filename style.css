@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: wheat;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    font-size: 3rem;
+    background-color: rgb(19, 102, 19);
+    color: white;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#corpoToDo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 20px;
+    height: 20vh;
+    width: 60vw;
+    background-color: rgb(19, 102, 19);
+}
+
+header{
+    display: flex;
+    height: 15vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#adicionar{
+    cursor: pointer;
+    background-color: wheat;
+    color: black;
+    border: 3px solid black;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+#adicionar:hover{
+    background-color:  rgb(231, 191, 116);
+    transform: scale(1.1);
+}
+
+#adicionar:active{
+    transform: scale(0.9);
+}
+
+#inputTarefa{
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    border: 3px solid black;
+}
+
+ul{
+    list-style: none;
+}
+
+.itemLista{
+    background-color: rgb(231, 191, 116);
+    padding: 10px 20px;
+    min-width: 40vw;
+    min-height: 3vh;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    border: 3px solid black;
+    transition: transform 0.5s ease;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemLista:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.fechar{
+    color: rgb(5, 70, 5);
+    font-weight: bolder;
+    font-size: 1.7rem;
+}
+
+.concluir{
+    transition: transform 0.4s ease;
+}
+
+.concluir:hover{
+    transform: scale(1.2);
+}
