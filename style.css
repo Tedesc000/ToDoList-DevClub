@@ -24,7 +24,7 @@ h1{
     height: 10vh;
     width: 100%;
     font-size: 3rem;
-    background-color: rgb(19, 102, 19);
+    background-color: rgb(1, 66, 1);
     color: white;
 }
 
@@ -43,7 +43,7 @@ button{
     gap: 20px;
     min-height: 20vh;
     padding: 20px;
-    width: 60vw;
+    min-width: 60vw;
     background-color: rgb(19, 102, 19);
     z-index: 2;
 }
@@ -118,7 +118,10 @@ header{
 
 .conteudoTarefa{
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    min-width: 0;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 .fechar{
@@ -187,4 +190,24 @@ header{
     height: 250px;
     top: 70%;
     right: 40%;
+}
+
+.labelTarefa {
+    display: flex;
+    align-items: start;
+    cursor: pointer;
+    word-break: break-all;
+    overflow-wrap: anywhere; /* Permite que palavras longas sejam quebradas e continuem na próxima linha, evitando que o layout seja quebrado. */
+    width: 85%;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    flex-shrink: 0; /* Impede que o checkbox encolha quando o texto for longo */
+}
+
+.checkbox:checked {
+    accent-color: green; /*altera a cor de destque do checkbox quando marcado*/
 }
